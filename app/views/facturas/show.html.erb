@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id cliente:</strong>
+  <%= @factura.id_cliente %>
+</p>
+
+<p>
+  <strong>Fecha factura:</strong>
+  <%= @factura.fecha_factura %>
+</p>
+
+<p>
+  <strong>Base imponible:</strong>
+  <%= @factura.base_imponible %>
+</p>
+
+<p>
+  <strong>Descuento:</strong>
+  <%= @factura.descuento %>
+</p>
+
+<p>
+  <strong>Iva:</strong>
+  <%= @factura.iva %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @factura.total %>
+</p>
+
+<%= link_to 'Edit', edit_factura_path(@factura) %> |
+<%= link_to 'Back', facturas_path %>
