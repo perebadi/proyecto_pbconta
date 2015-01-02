@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150101225158) do
+ActiveRecord::Schema.define(version: 20150102152139) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nombre",           limit: 255
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20150101225158) do
     t.datetime "updated_at",                   null: false
   end
 
+  create_table "detalle_facturas", force: :cascade do |t|
+    t.integer  "factura",    limit: 4
+    t.integer  "producto",   limit: 4
+    t.float    "unidades",   limit: 24
+    t.float    "subtotal",   limit: 24
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
   create_table "facturas", force: :cascade do |t|
     t.integer  "id_cliente",     limit: 4
     t.date     "fecha_factura"
@@ -40,6 +49,38 @@ ActiveRecord::Schema.define(version: 20150101225158) do
     t.float    "total",          limit: 24
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "factura",        limit: 4
+  end
+
+  create_table "productos", force: :cascade do |t|
+    t.string   "nombre",              limit: 255
+    t.integer  "id_proveedor",        limit: 4
+    t.integer  "id_categoria",        limit: 4
+    t.float    "cantidad_por_unidad", limit: 24
+    t.float    "precio_coste",        limit: 24
+    t.float    "precio_venta",        limit: 24
+    t.string   "estado",              limit: 255
+    t.float    "unidades",            limit: 24
+    t.float    "unidades_minimas",    limit: 24
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "proveedors", force: :cascade do |t|
+    t.string   "nombre",         limit: 255
+    t.string   "contacto",       limit: 255
+    t.string   "cargo_contacto", limit: 255
+    t.string   "direccion",      limit: 255
+    t.integer  "id_ciudad",      limit: 4
+    t.integer  "id_provincia",   limit: 4
+    t.integer  "id_pais",        limit: 4
+    t.string   "cp",             limit: 255
+    t.string   "telefono",       limit: 255
+    t.string   "movil",          limit: 255
+    t.string   "email",          limit: 255
+    t.string   "url",            limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

@@ -1,0 +1,53 @@
+<%= form_for(@producto) do |f| %>
+  <% if @producto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+      <ul>
+      <% @producto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :id_proveedor %><br>
+    <%= f.number_field :id_proveedor %>
+  </div>
+  <div class="field">
+    <%= f.label :id_categoria %><br>
+    <%= f.number_field :id_categoria %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad_por_unidad %><br>
+    <%= f.text_field :cantidad_por_unidad %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_coste %><br>
+    <%= f.text_field :precio_coste %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_venta %><br>
+    <%= f.text_field :precio_venta %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :unidades %><br>
+    <%= f.text_field :unidades %>
+  </div>
+  <div class="field">
+    <%= f.label :unidades_minimas %><br>
+    <%= f.text_field :unidades_minimas %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

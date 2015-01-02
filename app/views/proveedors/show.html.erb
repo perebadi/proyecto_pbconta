@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @proveedor.nombre %>
+</p>
+
+<p>
+  <strong>Contacto:</strong>
+  <%= @proveedor.contacto %>
+</p>
+
+<p>
+  <strong>Cargo contacto:</strong>
+  <%= @proveedor.cargo_contacto %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @proveedor.direccion %>
+</p>
+
+<p>
+  <strong>Id ciudad:</strong>
+  <%= @proveedor.id_ciudad %>
+</p>
+
+<p>
+  <strong>Id provincia:</strong>
+  <%= @proveedor.id_provincia %>
+</p>
+
+<p>
+  <strong>Id pais:</strong>
+  <%= @proveedor.id_pais %>
+</p>
+
+<p>
+  <strong>Cp:</strong>
+  <%= @proveedor.cp %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @proveedor.telefono %>
+</p>
+
+<p>
+  <strong>Movil:</strong>
+  <%= @proveedor.movil %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @proveedor.email %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @proveedor.url %>
+</p>
+
+<%= link_to 'Edit', edit_proveedor_path(@proveedor) %> |
+<%= link_to 'Back', proveedors_path %>

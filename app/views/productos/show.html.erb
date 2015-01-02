@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @producto.nombre %>
+</p>
+
+<p>
+  <strong>Id proveedor:</strong>
+  <%= @producto.id_proveedor %>
+</p>
+
+<p>
+  <strong>Id categoria:</strong>
+  <%= @producto.id_categoria %>
+</p>
+
+<p>
+  <strong>Cantidad por unidad:</strong>
+  <%= @producto.cantidad_por_unidad %>
+</p>
+
+<p>
+  <strong>Precio coste:</strong>
+  <%= @producto.precio_coste %>
+</p>
+
+<p>
+  <strong>Precio venta:</strong>
+  <%= @producto.precio_venta %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @producto.estado %>
+</p>
+
+<p>
+  <strong>Unidades:</strong>
+  <%= @producto.unidades %>
+</p>
+
+<p>
+  <strong>Unidades minimas:</strong>
+  <%= @producto.unidades_minimas %>
+</p>
+
+<%= link_to 'Edit', edit_producto_path(@producto) %> |
+<%= link_to 'Back', productos_path %>

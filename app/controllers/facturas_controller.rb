@@ -15,6 +15,7 @@ class FacturasController < ApplicationController
   # GET /facturas/new
   def new
     @factura = Factura.new
+
   end
 
   # GET /facturas/1/edit
